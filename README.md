@@ -3,6 +3,8 @@
 [Votrag](http://continuouslifecycle.de/lecture.php?id=4541) für die
 [Continuous Lifecycle 2014](http://continuouslifecycle.de/)
 
+Slides: [HTML](http://gesellix.github.io/conli2014/)
+
 ## Abstract
 
 Der Referent zeigt eine Implementierung einer Continuous Deployment Pipeline,
