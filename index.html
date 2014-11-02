@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Continuous Deployment mit Gradle und Docker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="shower/themes/gesellix/styles/screen.css">
+</head>
+<!--<body class="full">-->
+<body class="list">
+<header class="caption">
+    <h1>Continuous Deployment mit Gradle und Docker</h1>
+
+    <p>von <a target="_blank" href="http://www.gesellix.net/">Tobias Gesellchen</a>
+        @ <a target="_blank" href="http://www.hypoport.de/">Hypoport AG</a>
+    </p>
+</header>
+<section class="slide cover" id="cover">
+    <div>
+        <h2 class="text-shadow">Continuous Deployment mit Gradle und Docker</h2>
+
+        <p class="text-shadow"><a target="_blank" href="http://www.gesellix.net/">by Tobias Gesellchen</a></p>
+
+        <div class="logos">
+            <img src="pictures/logos/gradle-logo.png" alt="" class="gradle">
+            <img src="pictures/logos/docker-logo.png" alt="" class="docker">
+        </div>
+        <style>
+            #cover img {
+                opacity: 0.4;
+            }
+
+            #cover {
+                color: #000;
+                text-align: center;
+            }
+
+            #cover h2 {
+                font-size: 70px;
+                font-weight: bold;
+            }
+
+            #cover h3 {
+                font-size: 25px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+
+            #cover p a {
+                text-decoration: none;
+            }
+
+            #cover .logos {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+            }
+
+            #cover .logos img {
+                position: relative;
+                height: 50px;
+                padding: 10px;
+                vertical-align: middle;
+                opacity: 1;
+                background-color: rgba(150, 150, 150, 0);
+            }
+        </style>
+    </div>
+</section>
+
+<section class="slide" id="about">
+    <div>
+        <h2>Wer?</h2>
+        <img src="pictures/gesellix.jpg" alt="" id="portrait">
+
+        <p>Tobias Gesellchen</p>
+        <ul id="about-details">
+            <li>Softwareentwickler (Java, JavaScript, &hellip;)</li>
+            <li>bei: <a href="http://blog-it.hypoport.de/" target="_blank">Hypoport AG</a></li>
+            <li>Kontakt: <a href="https://twitter.com/gesellix" target="_blank">@gesellix</a></li>
+            <li>Blog: <a href="http://www.gesellix.net/" target="_blank">gesellix.net</a></li>
+        </ul>
+
+        <style>
+            #about img#portrait {
+                width: 150px;
+                height: 150px;
+                float: right;
+            }
+        </style>
+    </div>
+</section>
+
+<section class="slide" id="agenda">
+    <div>
+        <h2>Was?</h2>
+        <ol>
+            <li>Projekt-Überblick</li>
+            <li>Build und Orchestrierung mit Gradle</li>
+            <li>Docker als Schnittstelle für DevOps</li>
+        </ol>
+    </div>
+</section>
+
+<section class="slide" id="example-project">
+    <div>
+        <h2>Beispiel-Projekt</h2>
+
+        <ul>
+            <li>Spring Boot Webapps:
+                <ul>
+                    <li>AngularJS-Frontend</li>
+                    <li>Groovy-Backend</li>
+                </ul>
+            </li>
+            <li>Blue-Green-Deployment hinter einem HAProxy</li>
+            <li>CouchDB</li>
+            <li>Logstash (ELK-Stack)</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide shout" id="title-gradle">
+    <div>
+        <h2>Build und Orchestrierung mit Gradle</h2>
+    </div>
+</section>
+
+<section class="slide" id="deployment-pipeline">
+    <div>
+        <h2>Deployment Pipeline</h2>
+
+        <div><img src="pictures/deployment-pipeline.png" alt="" class="pipeline-overview"/></div>
+    </div>
+    <style>
+        img.pipeline-overview {
+            width: 85%;
+            margin-top: -25px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="gradle-power">
+    <div>
+        <h2>Gradle Power</h2>
+
+        <div class="logo-wrapper">
+            <span style="top: 20px;"><img src="pictures/logos/nodejs-light.png"/></span>
+            <span style="top: 60px;left:400px;"><img src="pictures/logos/grunt-logo.png"/></span>
+            <span style="top: 130px;left:200px;"><img src="pictures/logos/spring-boot-project-logo.png"/> Spring Boot</span>
+            <span style="top: 160px;left:600px;"><img src="pictures/logos/cargo-banner-left.png"/></span>
+            <span style="top: 270px;left:50px;">Ach ja: <img src="pictures/logos/groovy-logo-medium.png"/>
+                inkl. <img src="pictures/logos/httpbuilder-logo.png"/></span>
+        </div>
+    </div>
+    <style>
+        #gradle-power .logo-wrapper {
+            position: relative;
+        }
+
+        #gradle-power span {
+            float: left;
+            position: absolute;
+        }
+
+        #gradle-power img {
+            height: 70px;
+            vertical-align: bottom;
+        }
+    </style>
+</section>
+
+<section class="slide" id="deployment-with-gradle">
+    <div>
+        <h2>Gradle als Dirigent</h2>
+        <ul>
+            <li>Build, Publish</li>
+            <li>e2e-Tests/Protractor</li>
+            <li>Contract-Tests</li>
+            <li>Docker-Build, -Push</li>
+            <li>Docker-Pull, -Run</li>
+            <li>Toggle Blue&#8596;Green</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide shout" id="title-docker">
+    <div>
+        <h2>DevOps mit Docker</h2>
+    </div>
+</section>
+
+<section class="slide" id="responsibilities">
+    <div>
+        <h2>Verantwortungsverteilung</h2>
+
+        <i>Bild mit Infrastruktur/Server/VM/Docker/Applikation/Netzwerk</i>
+
+        <ul>
+            <li>Operator:
+                <ul>
+                    <li>Infrastruktur, Netzwerk, Docker Installation</li>
+                    <li>Monitoring, Support</li>
+                </ul>
+            </li>
+            <li>Developer:
+                <ul>
+                    <li>Inhalte der Docker-Images</li>
+                    <li>Monitoring, Support</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide" id="docker-overview">
+    <div>
+        <h2>Docker</h2>
+
+        <ul>
+            <li>Linux Container, keine VM</li>
+            <li>unter alternativen Betriebssystemen: boot2docker</li>
+            <li>Remote API, kein SSH notwendig</li>
+            <li>Image-Layer ermöglichen Caching</li>
+            <li>Mehrere Container desselben Images auf einem Host möglich</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide" id="links">
+    <div>
+        <h2>Fragen?</h2>
+
+        <div class="link-github">
+            <a href="https://github.com/gesellix/pipeline-with-gradle-and-docker"
+               target="_blank">gesellix/pipeline-with-gradle-and-docker</a>
+        </div>
+        <div class="">
+            <a href="http://blog-it.hypoport.de/"
+               target="_blank">Hypoport IT blog</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide shout" id="thanks">
+    <div>
+        <h2>Danke!</h2>
+    </div>
+</section>
+
+<div class="progress">
+    <div></div>
+</div>
+<script src="shower/shower.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+</body>
+</html>
