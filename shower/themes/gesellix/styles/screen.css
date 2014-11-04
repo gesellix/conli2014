@@ -272,6 +272,7 @@ a {
     height: 70%;
     font-size: 70%;
 }
+
 .slide pre:hover {
     overflow-y: scroll;
 }
@@ -714,15 +715,24 @@ p.text-shadow {
     padding-left: 35px;
 }
 
+.link-hypoport {
+    display: inline-block;
+    background-image: url('../images/hypoport_logo_96.png');
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 35px;
+}
+
 .slide pre {
     background: #211e1e;
     color: #dadada;
 }
 
 .summary {
-  display: block;
+    display: block;
 }
 
 .details {
-  display: none;
+    display: none;
 }
