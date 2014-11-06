@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="shower/themes/gesellix/styles/screen.css">
+    <link rel="stylesheet" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
 </head>
 <!--<body class="full">-->
 <body class="list">
@@ -202,27 +203,33 @@
     </div>
 </section>
 
-<section class="slide" id="responsibilities">
+<section class="slide" id="devops-responsibilities">
     <div>
         <h2>Verantwortungsverteilung</h2>
 
-        <i>Bild mit Infrastruktur/Server/VM/Docker/Applikation/Netzwerk</i>
+        <div class="img-wrapper">
+            <span style="right: -50px;top:-30px;"><img src="pictures/devops_verantwortungsverteilung.png"
+                                                       style="width: 400px;"/></span>
+        </div>
 
         <ul>
-            <li>Operator:
-                <ul>
-                    <li>Infrastruktur, Netzwerk, Docker Installation</li>
-                    <li>Monitoring, Support</li>
-                </ul>
-            </li>
-            <li>Developer:
-                <ul>
-                    <li>Inhalte der Docker-Images</li>
-                    <li>Monitoring, Support</li>
-                </ul>
-            </li>
+            <li>Operator als Enabler</li>
+            <li>Infrastruktur: Ops</li>
+            <li>Container, Applikation/DB: Dev</li>
+            <li>VMs (Provisioning), Docker: Dev+Ops</li>
+            <li>Monitoring, Support: Dev+Ops</li>
         </ul>
     </div>
+    <style>
+        #devops-responsibilities .img-wrapper {
+            position: relative;
+        }
+
+        #devops-responsibilities .img-wrapper span {
+            float: left;
+            position: absolute;
+        }
+    </style>
 </section>
 
 <section class="slide" id="docker-overview">
@@ -231,10 +238,23 @@
 
         <ul>
             <li>Linux Container, keine VM</li>
-            <li>unter alternativen Betriebssystemen: boot2docker</li>
-            <li>Remote API, kein SSH notwendig</li>
+            <li>Remote API (unter alternativen Betriebssystemen: boot2docker)</li>
             <li>Image-Layer ermöglichen Caching</li>
             <li>Mehrere Container desselben Images auf einem Host möglich</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide" id="why-docker">
+    <div>
+        <h2>Warum Docker?</h2>
+
+        <ul>
+            <li>Developer müssen lernen&#8594;Operations wird entlastet
+                <i class="fa fa-thumbs-o-up" style="display: inline;"></i></li>
+            <li>Remote API&#8594;kein SSH notwendig</li>
+            <li>Host kann generisch bleiben</li>
+            <li>Flexibel: Runtime-Environment, Build-Environment, &hellip;</li>
         </ul>
     </div>
 </section>
@@ -244,21 +264,55 @@
         <h2>Fragen?</h2>
 
         <div>
-            <div>Links</div>
+            <div class="">
+                Slides: <a href="http://gesellix.github.io/conli2014/"
+                           target="_blank">http://gesellix.github.io/conli2014/</a>
+            </div>
 
-            <div class="link-github">
+            <div class="link-hypoport">
+                <i class="icon-hypoport"></i>
+                <a href="http://blog-it.hypoport.de/"
+                   target="_blank">Hypoport IT blog</a>
+            </div>
+
+            <div class="link-fa link-github">
+                <i class="fa fa-github"></i>
                 <a href="https://github.com/gesellix/pipeline-with-gradle-and-docker"
                    target="_blank">gesellix/pipeline-with-gradle-and-docker</a>
             </div>
 
-            <br/>
+            <div class="link-fa link-twitter">
+                <i class="fa fa-twitter"></i>
+                <a href="https://twitter.com/gesellix"
+                   target="_blank">@gesellix</a>
+            </div>
 
-            <div class="link-hypoport">
-                <a href="http://blog-it.hypoport.de/"
-                   target="_blank">Hypoport IT blog</a>
+            <div class="link-fa link-blog">
+                <i class="fa fa-rss"></i>
+                <a href="http://www.gesellix.net"
+                   target="_blank">gesellix.net</a>
             </div>
         </div>
     </div>
+    <style>
+        .link-fa i {
+            font-style: normal;
+            font-size: 32px;
+            padding-left: 1px;
+        }
+        .link-fa a {
+            padding-left: 2px;
+        }
+
+        .link-hypoport {
+            display: inline-block;
+            background-image: url('pictures/logos/hypoport_logo_96.png');
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 35px;
+        }
+    </style>
 </section>
 
 <section class="slide shout" id="thanks">

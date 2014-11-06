@@ -707,23 +707,6 @@ p.text-shadow {
     content: '↪ ';
 }
 
-.link-github {
-    display: inline-block;
-    background-image: url('../images/github/PNG/GitHub-Mark-32px.png');
-    background-repeat: no-repeat;
-    background-position: left;
-    padding-left: 35px;
-}
-
-.link-hypoport {
-    display: inline-block;
-    background-image: url('../images/hypoport_logo_96.png');
-    background-size: 32px;
-    background-repeat: no-repeat;
-    background-position: left;
-    padding-left: 35px;
-}
-
 .slide pre {
     background: #211e1e;
     color: #dadada;
