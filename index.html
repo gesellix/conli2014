@@ -203,6 +203,35 @@
     </div>
 </section>
 
+<section class="slide" id="docker-overview">
+    <div>
+        <h2>Docker</h2>
+
+        <ul>
+            <li>Linux Container, keine VM</li>
+            <li>Remote API (boot2docker)&#8594;kein SSH auf dem Host notwendig</li>
+            <li>Caching der Image-Layer</li>
+            <li>Mehrere Container desselben Images auf einem Host möglich</li>
+            <li>Flexibel: Build-, Test-, Runtime-Environment, &hellip;</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide" id="why-docker">
+    <div>
+        <h2>Warum Docker für DevOps?</h2>
+
+        <ul>
+            <li>Aktuell: &lt;10 Operators für 500 Mitarbeiter</li>
+            <li>Developer lernen&#8594;Operations wird entlastet</li>
+            <li>Dockerfiles direkt im Produkt-VCS</li>
+            <li>Projektspezifische Umgebung</li>
+            <li>Produkte werden unabhängiger</li>
+            <li>Klare Schnittstellen müssen definiert werden</li>
+        </ul>
+    </div>
+</section>
+
 <section class="slide" id="devops-responsibilities">
     <div>
         <h2>Verantwortungsverteilung</h2>
@@ -232,29 +261,13 @@
     </style>
 </section>
 
-<section class="slide" id="docker-overview">
+<section class="slide" id="whats-next">
     <div>
-        <h2>Docker</h2>
+        <h2>Ausblick</h2>
 
         <ul>
-            <li>Linux Container, keine VM</li>
-            <li>Remote API (unter alternativen Betriebssystemen: boot2docker)</li>
-            <li>Image-Layer ermöglichen Caching</li>
-            <li>Mehrere Container desselben Images auf einem Host möglich</li>
-        </ul>
-    </div>
-</section>
-
-<section class="slide" id="why-docker">
-    <div>
-        <h2>Warum Docker?</h2>
-
-        <ul>
-            <li>Developer müssen lernen&#8594;Operations wird entlastet
-                <i class="fa fa-thumbs-o-up" style="display: inline;"></i></li>
-            <li>Remote API&#8594;kein SSH notwendig</li>
-            <li>Host kann generisch bleiben</li>
-            <li>Flexibel: Runtime-Environment, Build-Environment, &hellip;</li>
+            <li>Docker mit Multi-Host Orchestrierung</li>
+            <li>...</li>
         </ul>
     </div>
 </section>
@@ -300,6 +313,7 @@
             font-size: 32px;
             padding-left: 1px;
         }
+
         .link-fa a {
             padding-left: 2px;
         }
