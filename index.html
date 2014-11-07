@@ -129,7 +129,7 @@
 
         <ul>
             <li>Linux Container, keine VM</li>
-            <li>Remote API (boot2docker)&#8594;kein SSH auf dem Host notwendig</li>
+            <li>Remote API (boot2docker) &#8594; kein SSH auf dem Host notwendig</li>
             <li>Caching der Image-Layer</li>
             <li>Mehrere Container desselben Images auf einem Host möglich</li>
             <li>Flexibel: Build-, Test-, Runtime-Environment, &hellip;</li>
@@ -150,25 +150,39 @@
     </style>
 </section>
 
-<section class="slide cover" id="why-docker">
+<section class="slide cover" id="why-docker-1">
     <div>
-        <h2>Warum Docker für DevOps?</h2>
+        <h2>Woher?</h2>
 
         <ul>
             <li>Aktuell: &lt;10 Operators für 500 Mitarbeiter</li>
             <li>Operations reagiert oft nur noch</li>
-        </ul>
-
-        <ul>
-            <li>Build und Runtime als Dockerfiles direkt im Produkt VCS</li>
-            <li>Flexiblere Infrastruktur&#8594;flexiblere Produkte</li>
-            <li>Klare Schnittstellen werden definiert (Dev&#8596;Dev, Dev&#8596;Ops)</li>
+            <li>Senior Hipster Developer wollen mehr</li>
         </ul>
 
         <img src="pictures/external/7972042690_f0009e9f92_o.jpg" class="background fill" alt=""/>
     </div>
     <style>
-        #why-docker img.background {
+        #why-docker-1 img.background {
+            opacity: 0.3;
+        }
+    </style>
+</section>
+
+<section class="slide cover" id="why-docker-2">
+    <div>
+        <h2>Wohin?</h2>
+
+        <ul>
+            <li>Build und Runtime als Dockerfiles direkt im Produkt VCS</li>
+            <li>Flexible Infrastruktur &#8594; flexible Produkte</li>
+            <li>Klare Schnittstellen werden definiert (Dev &#8596; Dev, Dev &#8596; Ops)</li>
+        </ul>
+
+        <img src="pictures/external/7972042690_f0009e9f92_o.jpg" class="background fill" alt=""/>
+    </div>
+    <style>
+        #why-docker-2 img.background {
             opacity: 0.3;
         }
     </style>
@@ -245,7 +259,7 @@
 
 <section class="slide" id="gradle-power">
     <div>
-        <h2>Gradle Power</h2>
+        <h2>Gradle und der ganze Rest</h2>
 
         <div class="logo-wrapper">
             <span style="top: 10px;left:50px;"><img src="pictures/logos/grunt-logo.png"/></span>
@@ -317,7 +331,7 @@
             <li>Docker mit <a href="https://gist.github.com/aanand/9e7ac7185ffd64c1a91a"
                               target="_blank">Multi-Host Orchestrierung</a></li>
             <li>Service-Discovery: nützlich für Tests und Deployment</li>
-            <li>Mehr Builds in Docker-Containern</li>
+            <li>Für mehr Builds in Docker-Containern (z.B. Android, Node, &hellip;)</li>
             <li>Lernen: Security, Monitoring, &hellip;</li>
         </ul>
         <img src="pictures/external/2317183342_599d4a2d8a_o.jpg" class="background fill" alt=""/>
