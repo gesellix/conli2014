@@ -27,8 +27,11 @@
             <img src="pictures/logos/gradle-logo.png" alt="" class="gradle">
             <img src="pictures/logos/docker-logo.png" alt="" class="docker">
         </div>
+
+        <img src="pictures/external/5647125141_e7cce6a7f5_o.jpg" class="background fill" alt=""/>
+
         <style>
-            #cover img {
+            #cover img.background {
                 opacity: 0.4;
             }
 
@@ -69,6 +72,7 @@
             }
 
             #cover .logos img {
+                z-index: 10;
                 position: relative;
                 height: 50px;
                 padding: 10px;
@@ -107,93 +111,9 @@
     <div>
         <h2>Was?</h2>
         <ol>
-            <li>Überblick</li>
+            <li>Docker als Schnittstelle für Dev+Ops</li>
             <li>Build und Orchestrierung mit Gradle</li>
-            <li>Docker als Schnittstelle für DevOps</li>
         </ol>
-    </div>
-</section>
-
-<section class="slide" id="example-project">
-    <div>
-        <h2>Beispiel-Projekt</h2>
-
-        <ul>
-            <li>Spring Boot Webapps:
-                <ul>
-                    <li>AngularJS-Frontend</li>
-                    <li>Groovy-Backend</li>
-                </ul>
-            </li>
-            <li>Blue-Green-Deployment hinter einem HAProxy</li>
-            <li>CouchDB</li>
-            <li>Logstash (ELK-Stack)</li>
-        </ul>
-    </div>
-</section>
-
-<section class="slide shout" id="title-gradle">
-    <div>
-        <h2>Build und Orchestrierung mit Gradle</h2>
-    </div>
-</section>
-
-<section class="slide" id="deployment-pipeline">
-    <div>
-        <h2>Deployment Pipeline</h2>
-
-        <div><img src="pictures/deployment-pipeline.png" alt="" class="pipeline-overview"/></div>
-    </div>
-    <style>
-        img.pipeline-overview {
-            width: 85%;
-            margin-top: -25px;
-        }
-    </style>
-</section>
-
-<section class="slide" id="gradle-power">
-    <div>
-        <h2>Gradle Power</h2>
-
-        <div class="logo-wrapper">
-            <span style="top: 10px;left:50px;"><img src="pictures/logos/grunt-logo.png"/></span>
-            <span style="top: 60px;left:280px;"><img src="pictures/logos/nodejs-light.png"/></span>
-            <span style="top: 20px;left:550px;"><img src="pictures/logos/protractor-logo-450.png"/></span>
-            <span style="top: 130px;left:100px;"><img src="pictures/logos/spring-boot-project-logo.png"/> Spring Boot</span>
-            <span style="top: 140px;left:600px;"><img src="pictures/logos/cargo-banner-left.png"/></span>
-            <span style="top: 200px;left:290px;"><img src="pictures/logos/docker-logo.png"/></span>
-            <span style="top: 300px;left:50px;">Ach ja: <img src="pictures/logos/groovy-logo-medium.png"/>
-                inkl. <img src="pictures/logos/httpbuilder-logo.png"/></span>
-        </div>
-    </div>
-    <style>
-        #gradle-power .logo-wrapper {
-            position: relative;
-        }
-
-        #gradle-power span {
-            float: left;
-            position: absolute;
-        }
-
-        #gradle-power img {
-            height: 70px;
-            vertical-align: bottom;
-        }
-    </style>
-</section>
-
-<section class="slide" id="deployment-with-gradle">
-    <div>
-        <h2>Gradle als Dirigent</h2>
-        <ul>
-            <li>Build und Publish einer JVM-/JS-Applikation</li>
-            <li>e2e-Tests per Protractor</li>
-            <li>Contract-Tests</li>
-            <li>Deployments mit Docker</li>
-            <li>Toggle Blue&#8596;Green</li>
-        </ul>
     </div>
 </section>
 
@@ -203,7 +123,7 @@
     </div>
 </section>
 
-<section class="slide" id="docker-overview">
+<section class="slide cover" id="docker-overview">
     <div>
         <h2>Docker</h2>
 
@@ -214,22 +134,44 @@
             <li>Mehrere Container desselben Images auf einem Host möglich</li>
             <li>Flexibel: Build-, Test-, Runtime-Environment, &hellip;</li>
         </ul>
+
+        <img src="pictures/external/2859509269_a39fcd3bc6_o.jpg" class="background fill" alt=""/>
     </div>
+    <style>
+        #docker-overview ul {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding-left: 10px;
+        }
+
+        #docker-overview img.background {
+            opacity: 0.5;
+        }
+    </style>
 </section>
 
-<section class="slide" id="why-docker">
+<section class="slide cover" id="why-docker">
     <div>
         <h2>Warum Docker für DevOps?</h2>
 
         <ul>
             <li>Aktuell: &lt;10 Operators für 500 Mitarbeiter</li>
-            <li>Developer lernen&#8594;Operations wird entlastet</li>
-            <li>Dockerfiles direkt im Produkt-VCS</li>
-            <li>Projektspezifische Umgebung</li>
-            <li>Produkte werden unabhängiger</li>
-            <li>Klare Schnittstellen müssen definiert werden</li>
+            <li>Operations reagiert oft nur noch</li>
         </ul>
+
+        <ul>
+            <li>Build und Runtime als Dockerfiles direkt im Produkt VCS</li>
+            <li>Flexiblere Infrastruktur&#8594;flexiblere Produkte</li>
+            <li>Klare Schnittstellen werden definiert (Dev&#8596;Dev, Dev&#8596;Ops)</li>
+        </ul>
+
+        <img src="pictures/external/7972042690_f0009e9f92_o.jpg" class="background fill" alt=""/>
     </div>
+    <style>
+        #why-docker img.background {
+            opacity: 0.3;
+        }
+    </style>
 </section>
 
 <section class="slide" id="devops-responsibilities">
@@ -261,15 +203,128 @@
     </style>
 </section>
 
-<section class="slide" id="whats-next">
+<section class="slide shout" id="title-gradle">
+    <div>
+        <h2>Build und Orchestrierung mit Gradle</h2>
+    </div>
+</section>
+
+<section class="slide cover" id="example-project">
+    <div>
+        <h2>Beispiel-Projekt</h2>
+
+        <ul>
+            <li>Spring Boot Webapps:
+                <ul>
+                    <li>AngularJS-Frontend</li>
+                    <li>Groovy-Backend</li>
+                </ul>
+            </li>
+            <li>Blue-Green-Deployment hinter einem HAProxy</li>
+            <li>CouchDB</li>
+            <li>Logstash (ELK-Stack)</li>
+        </ul>
+
+        <img src="pictures/external/3281636449_0213562ce7_o.jpg" class="background fill flip-x" alt=""/>
+    </div>
+    <style>
+        #example-project img.background {
+            opacity: 0.6;
+        }
+        #example-project img.flip-x {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+    </style>
+</section>
+
+<section class="slide" id="gradle-power">
+    <div>
+        <h2>Gradle Power</h2>
+
+        <div class="logo-wrapper">
+            <span style="top: 10px;left:50px;"><img src="pictures/logos/grunt-logo.png"/></span>
+            <span style="top: 60px;left:280px;"><img src="pictures/logos/nodejs-light.png"/></span>
+            <span style="top: 20px;left:550px;"><img src="pictures/logos/protractor-logo-450.png"/></span>
+            <span style="top: 130px;left:100px;"><img src="pictures/logos/spring-boot-project-logo.png"/> Spring Boot</span>
+            <span style="top: 140px;left:600px;"><img src="pictures/logos/cargo-banner-left.png"/></span>
+            <span style="top: 200px;left:290px;"><img src="pictures/logos/docker-logo.png"/></span>
+            <span style="top: 300px;left:50px;">Ach ja: <img src="pictures/logos/groovy-logo-medium.png"/>
+                inkl. <img src="pictures/logos/httpbuilder-logo.png"/></span>
+        </div>
+    </div>
+    <style>
+        #gradle-power .logo-wrapper {
+            position: relative;
+        }
+
+        #gradle-power .logo-wrapper span {
+            float: left;
+            position: absolute;
+        }
+
+        #gradle-power .logo-wrapper img {
+            height: 70px;
+            vertical-align: bottom;
+        }
+    </style>
+</section>
+
+<section class="slide" id="deployment-pipeline">
+    <div>
+        <h2>Deployment Pipeline</h2>
+
+        <div><img src="pictures/deployment-pipeline.png" alt="" class="pipeline-overview"/></div>
+    </div>
+    <style>
+        img.pipeline-overview {
+            width: 85%;
+            margin-top: -25px;
+        }
+    </style>
+</section>
+
+<section class="slide cover" id="deployment-with-gradle">
+    <div>
+        <h2>Build-Orchestrierung</h2>
+        <ul>
+            <li>Build und Publish einer JVM-/JS-Applikation</li>
+            <li>e2e-Tests per Protractor</li>
+            <li>Contract-Tests</li>
+            <li>Deployments mit Docker</li>
+            <li>Toggle Blue&#8596;Green</li>
+        </ul>
+
+        <img src="pictures/external/843113245_b5526d47ce_o.jpg" class="background fill" alt=""/>
+    </div>
+    <style>
+        #deployment-with-gradle img.background {
+            opacity: 0.6;
+        }
+    </style>
+</section>
+
+<section class="slide cover" id="whats-next">
     <div>
         <h2>Ausblick</h2>
 
         <ul>
-            <li>Docker mit Multi-Host Orchestrierung</li>
-            <li>...</li>
+            <li>Docker mit <a href="https://gist.github.com/aanand/9e7ac7185ffd64c1a91a"
+                              target="_blank">Multi-Host Orchestrierung</a></li>
+            <li>Service-Discovery: nützlich für Tests und Deployment</li>
+            <li>Lernen: Security, Monitoring, &hellip;</li>
         </ul>
+        <img src="pictures/external/2317183342_599d4a2d8a_o.jpg" class="background fill" alt=""/>
     </div>
+    <style>
+        #whats-next img.background {
+            opacity: 0.4;
+        }
+    </style>
 </section>
 
 <section class="slide" id="links">
@@ -305,9 +360,23 @@
                 <a href="http://www.gesellix.net"
                    target="_blank">gesellix.net</a>
             </div>
+
+            <div class="">
+                <a href="https://entwickler.de/docker_spezial"
+                   target="_blank"><img src="pictures/external/cover_entwickler_spezial_docker_v11.jpg"
+                                        class="cover_docker_spezial" alt=""/></a>
+            </div>
         </div>
     </div>
     <style>
+        .cover_docker_spezial {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            right: 100px;
+            bottom: 100px;
+        }
+
         .link-fa i {
             font-style: normal;
             font-size: 32px;
