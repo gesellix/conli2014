@@ -123,33 +123,6 @@
     </div>
 </section>
 
-<section class="slide cover" id="docker-overview">
-    <div>
-        <h2>Docker</h2>
-
-        <ul>
-            <li>Linux Container, keine VM</li>
-            <li>Remote API (boot2docker) &#8594; kein SSH auf dem Host notwendig</li>
-            <li>Caching der Image-Layer</li>
-            <li>Mehrere Container desselben Images auf einem Host möglich</li>
-            <li>Flexibel: Build-, Test-, Runtime-Environment, &hellip;</li>
-        </ul>
-
-        <img src="pictures/external/2859509269_a39fcd3bc6_o.jpg" class="background fill" alt=""/>
-    </div>
-    <style>
-        #docker-overview ul {
-            background-color: rgba(255, 255, 255, 0.8);
-            color: black;
-            padding-left: 10px;
-        }
-
-        #docker-overview img.background {
-            opacity: 0.5;
-        }
-    </style>
-</section>
-
 <section class="slide cover" id="why-docker-1">
     <div>
         <h2>Woher?</h2>
@@ -174,9 +147,9 @@
         <h2>Wohin?</h2>
 
         <ul>
-            <li>Build und Runtime als Dockerfiles direkt im Produkt VCS</li>
             <li>Flexible Infrastruktur &#8594; flexible Produkte</li>
             <li>Klare Schnittstellen werden definiert (Dev &#8596; Dev, Dev &#8596; Ops)</li>
+            <li>Build und Runtime als Dockerfiles direkt im Produkt VCS</li>
         </ul>
 
         <img src="pictures/external/7972042690_f0009e9f92_o.jpg" class="background fill" alt=""/>
@@ -184,6 +157,33 @@
     <style>
         #why-docker-2 img.background {
             opacity: 0.3;
+        }
+    </style>
+</section>
+
+<section class="slide cover" id="docker-overview">
+    <div>
+        <h2>Docker</h2>
+
+        <ul>
+            <li>Linux Container, keine VM</li>
+            <li>Remote API (boot2docker) &#8594; kein SSH auf dem Host notwendig</li>
+            <li>Caching der Image-Layer</li>
+            <li>Mehrere Container desselben Images auf einem Host möglich</li>
+            <li>Flexibel: Build-, Test-, Runtime-Environment, &hellip;</li>
+        </ul>
+
+        <img src="pictures/external/2859509269_a39fcd3bc6_o.jpg" class="background fill" alt=""/>
+    </div>
+    <style>
+        #docker-overview ul {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding-left: 10px;
+        }
+
+        #docker-overview img.background {
+            opacity: 0.5;
         }
     </style>
 </section>
