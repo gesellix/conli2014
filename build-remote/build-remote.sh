@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 tar -cz --exclude=./node_modules . | curl -X POST "$DOCKER_HOST/build?t=projekt-builder" -H "Content-Type: application/tar" -T -
 
