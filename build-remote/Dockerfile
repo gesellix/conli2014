@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM busybox:latest
 
 # Hier kann etwas mehr stehen, wie z.B. die Installation von
 # diversen build-tools, das Setzen von Umgebungsvariablen
